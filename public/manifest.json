@@ -1,0 +1,153 @@
+{
+  "name": "myMotivationAI",
+  "short_name": "MotivationAI",
+  "description": "AI-powered motivation and self-improvement platform with personalized exercises and progress tracking",
+  "start_url": "/qr-landing?source=pwa",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "id": "/",
+  "categories": ["productivity", "health", "lifestyle", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Daily motivation exercises"
+    },
+    {
+      "src": "/screenshots/mobile-2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Progress tracking dashboard"
+    },
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Web dashboard view"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Motivation",
+      "short_name": "Daily",
+      "description": "Get today's personalized motivation exercise",
+      "url": "/app/daily?source=shortcut",
+      "icons": [
+        {
+          "src": "/icons/shortcut-daily.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Progress Dashboard",
+      "short_name": "Progress",
+      "description": "View your motivation progress and streaks",
+      "url": "/app/dashboard?source=shortcut",
+      "icons": [
+        {
+          "src": "/icons/shortcut-progress.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "New Exercise",
+      "short_name": "New",
+      "description": "Start a new motivation exercise",
+      "url": "/app/exercises/new?source=shortcut",
+      "icons": [
+        {
+          "src": "/icons/shortcut-new.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+mymotivationai",
+      "url": "/app?protocol=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/app/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.mymotivationai.app",
+      "id": "com.mymotivationai.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/mymotivationai/id1234567890"
+    }
+  ],
+  "prefer_related_applications": false
+}
