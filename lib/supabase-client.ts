@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
-// Supabase configuration for hybrid app
-const supabaseUrl = 'https://fhtknpbvhmdrlsifrqml.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZodGtucGJ2aG1kcmxzaWZycW1sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MjU2NDIsImV4cCI6MjA4ODIwMTY0Mn0.SSLSCWSab_fzkNC8YgpP2S7IuIupwo5FzFBMMT1yzbQ'
+// Supabase configuration for hybrid app (use env vars in production)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
 // Create Supabase client with offline-first configuration
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {

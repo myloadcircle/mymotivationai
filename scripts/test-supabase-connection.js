@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
 // Test Supabase connection for MotivationAI
+// Load .env.local for credentials
+require('dotenv').config({ path: '.env.local' });
+
 const { createClient } = require('@supabase/supabase-js')
 
-const supabaseUrl = 'https://fhtknpbvhmdrlsifrqml.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZodGtucGJ2aG1kcmxzaWZycW1sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MjU2NDIsImV4cCI6MjA4ODIwMTY0Mn0.SSLSCWSab_fzkNC8YgpP2S7IuIupwo5FzFBMMT1yzbQ'
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error('❌ Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY in .env.local')
+  process.exit(1)
+}
 
 console.log('🔌 Testing Supabase Connection...')
 console.log('================================')

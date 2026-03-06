@@ -8,8 +8,6 @@ import {
   Target, 
   Brain, 
   BarChart3, 
-  Bell, 
-  User,
   Settings,
   Menu,
   X,
@@ -24,11 +22,9 @@ export default function Navigation() {
 
   const navigationItems = [
     { name: 'Dashboard', href: '/dashboard', icon: <Home className="h-5 w-5" /> },
-    { name: 'Goals', href: '/goals', icon: <Target className="h-5 w-5" /> },
+    { name: 'Goals', href: '/dashboard', icon: <Target className="h-5 w-5" /> },
     { name: 'AI Insights', href: '/insights', icon: <Brain className="h-5 w-5" /> },
-    { name: 'Analytics', href: '/analytics', icon: <BarChart3 className="h-5 w-5" /> },
-    { name: 'Notifications', href: '/notifications', icon: <Bell className="h-5 w-5" /> },
-    { name: 'Profile', href: '/profile', icon: <User className="h-5 w-5" /> },
+    { name: 'Analytics', href: '/insights', icon: <BarChart3 className="h-5 w-5" /> },
   ];
 
   const isActive = (href: string) => {
@@ -63,18 +59,13 @@ export default function Navigation() {
                   {item.icon}
                 </div>
                 <span className="font-medium">{item.name}</span>
-                {item.name === 'Notifications' && (
-                  <span className="ml-auto bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    3
-                  </span>
-                )}
               </Link>
             ))}
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-200">
             <Link
-              href="/settings"
+              href="/dashboard"
               className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 transition-colors"
             >
               <Settings className="h-5 w-5 mr-3 text-gray-500" />
@@ -152,17 +143,12 @@ export default function Navigation() {
                     {item.icon}
                   </div>
                   <span className="font-medium">{item.name}</span>
-                  {item.name === 'Notifications' && (
-                    <span className="ml-auto bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                      3
-                    </span>
-                  )}
                 </Link>
               ))}
               
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  href="/settings"
+                  href="/dashboard"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 transition-colors"
                 >

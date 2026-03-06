@@ -7,11 +7,9 @@ export default withAuth(
     const path = req.nextUrl.pathname;
 
     // Define protected routes and their required plans
-    const protectedRoutes = {
-      '/dashboard/goals/unlimited': 'basic',
-      '/dashboard/analytics': 'pro',
-      '/dashboard/ai-insights': 'pro',
-      '/dashboard/advanced-settings': 'basic',
+    const protectedRoutes: Record<string, string> = {
+      '/dashboard': 'free',
+      '/insights': 'free',
     };
 
     // Check if the current path requires a specific plan
@@ -59,6 +57,7 @@ export default withAuth(
 export const config = {
   matcher: [
     '/dashboard/:path*',
+    '/insights/:path*',
     '/api/user/:path*',
     '/api/goals/:path*',
     '/api/analytics/:path*',

@@ -307,17 +307,11 @@ export default function DemoDashboard() {
               Demo Dashboard • myMotivationAI • All features shown here are fully functional with database setup
             </p>
             <div className="mt-4 flex justify-center space-x-6">
-              <Link href="/phase4-test" className="text-gray-300 hover:text-white">
-                Phase 4 Test
+              <Link href="/auth/signup" className="text-gray-300 hover:text-white">
+                Get Started
               </Link>
-              <Link href="/phase5-test" className="text-gray-300 hover:text-white">
-                Phase 5 Test
-              </Link>
-              <Link href="/phase6-test" className="text-gray-300 hover:text-white">
-                Phase 6 Test
-              </Link>
-              <Link href="/demo/celebration" className="text-gray-300 hover:text-white">
-                Celebration Demo
+              <Link href="/pricing" className="text-gray-300 hover:text-white">
+                Pricing
               </Link>
             </div>
           </div>

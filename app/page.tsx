@@ -26,17 +26,17 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/demo-dashboard"
+                href="/auth/signup"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                View Demo Dashboard
+                Get Started Free
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                href="/auth/signup"
+                href="/auth/signin"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-900 bg-white border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               >
-                Sign Up (Requires DB)
+                Sign In
               </Link>
             </div>
           </div>
@@ -325,8 +325,8 @@ export default function HomePage() {
               <p className="text-gray-400">AI-powered motivation for everyone</p>
             </div>
             <div className="flex gap-8">
-              <Link href="/dashboard" className="text-gray-300 hover:text-white">
-                Dashboard
+              <Link href="/demo-dashboard" className="text-gray-300 hover:text-white">
+                Try Demo
               </Link>
               <Link href="/pricing" className="text-gray-300 hover:text-white">
                 Pricing
